@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test - Portafolio</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            background: #0a0a1a; 
+            color: white; 
+            padding: 20px;
+        }
+        .test-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            border: 1px solid #8b5cf6;
+        }
+        .success { border-color: #00ffff; }
+        .error { border-color: #ff4444; }
+    </style>
+</head>
+<body>
+    <h1>🔧 Test del Portafolio</h1>
+    
+    <div id="results"></div>
+    
+    <script>
+        function runTests() {
+            const results = document.getElementById('results');
+            const tests = [
+                {
+                    name: 'Elementos de Proyecto',
+                    test: () => document.querySelectorAll('.project-card').length > 0
+                },
+                {
+                    name: 'Elementos de Habilidades',
+                    test: () => document.querySelectorAll('.skill-item').length > 0
+                },
+                {
+                    name: 'Sistema de Traducciones',
+                    test: () => typeof window.translator !== 'undefined'
+                },
+                {
+                    name: 'Módulo de Animaciones',
+                    test: () => typeof AnimationManager !== 'undefined'
+                }
+            ];
+            
+            // Cargar los scripts del portafolio
+            const scripts = [
+                'js/utils.js',
+                'js/translations.js', 
+                'js/notifications.js',
+                'js/animations.js',
+                'js/navigation.js',
+                'js/main.js'
+            ];
+            
+            let scriptsLoaded = 0;
+            scripts.forEach(src => {
+                const script = document.createElement('script');
+                script.src = src;
+                script.onload = () => {
+                    scriptsLoaded++;
+                    if (scriptsLoaded === scripts.length) {
+                        setTimeout(() => executeTests(tests), 1000);
+                    }
+                };
+                script.onerror = () => {
+                    results.innerHTML += `<div class="test-card error">❌ Error cargando: ${src}</div>`;
+                };
+                document.head.appendChild(script);
+            });
+        }
+        
+        function executeTests(tests) {
+            const results = document.getElementById('results');
+            
+            tests.forEach(test => {
+                try {
+                    const passed = test.test();
+                    const status = passed ? '✅' : '❌';
+                    const className = passed ? 'success' : 'error';
+                    results.innerHTML += `<div class="test-card ${className}">${status} ${test.name}</div>`;
+                } catch (error) {
+                    results.innerHTML += `<div class="test-card error">❌ ${test.name}: ${error.message}</div>`;
+                }
+            });
+        }
+        
+        // Simular estructura HTML básica
+        document.body.innerHTML += `
+            <div style="display: none;">
+                <div class="project-card">Test Project</div>
+                <div class="skill-item">Test Skill</div>
+            </div>
+        `;
+        
+        runTests();
+    </script>
+</body>
+</html>

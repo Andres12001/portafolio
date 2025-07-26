@@ -1,0 +1,63 @@
+/* ========================================
+   FOOTER
+   ======================================== */
+
+.footer {
+    background: var(--color-primary);
+    padding: 2rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-left p {
+    color: var(--color-text-secondary);
+    font-size: 0.9rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-link {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-secondary);
+    transition: var(--transition);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-link:hover {
+    transform: translateY(-3px);
+    color: var(--color-text);
+    border-color: var(--color-cyan);
+    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.3);
+}
+
+.social-link.email:hover {
+    background: linear-gradient(135deg, var(--color-cyan), var(--color-blue));
+}
+
+.social-link.linkedin:hover {
+    background: linear-gradient(135deg, #0077b5, #00a0dc);
+}
+
+.social-link.github:hover {
+    background: linear-gradient(135deg, #333, #666);
+}
+
+.social-link svg {
+    width: 20px;
+    height: 20px;
+}

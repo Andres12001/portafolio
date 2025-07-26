@@ -1,0 +1,245 @@
+/* Estilos para el botón de cambio de idioma */
+.language-toggle {
+    background: linear-gradient(135deg, #00ffff, #8b5cf6);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-left: 1rem;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.language-flag {
+    font-size: 1.1rem;
+}
+
+.language-text {
+    font-weight: 700;
+}
+
+.language-toggle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.language-toggle:hover::before {
+    left: 100%;
+}
+
+.language-toggle:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 255, 255, 0.4);
+    filter: brightness(1.1);
+}
+
+.language-toggle:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3);
+}
+
+/* Animación de cambio de idioma */
+.language-changing {
+    animation: languageSwitch 0.3s ease-in-out;
+}
+
+@keyframes languageSwitch {
+    0% {
+        transform: scale(1) rotateY(0deg);
+    }
+    50% {
+        transform: scale(1.1) rotateY(180deg);
+    }
+    100% {
+        transform: scale(1) rotateY(360deg);
+    }
+}
+
+/* Indicador de idioma activo */
+.language-toggle[data-lang="es"]::after {
+    content: "🇪🇸";
+    margin-left: 0.5rem;
+}
+
+.language-toggle[data-lang="en"]::after {
+    content: "🇺🇸";
+    margin-left: 0.5rem;
+}
+
+/* Responsive para el botón de idioma */
+@media (max-width: 768px) {
+    .language-toggle {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+        margin-left: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .language-toggle {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.75rem;
+    }
+    
+    .language-toggle[data-lang="es"]::after,
+    .language-toggle[data-lang="en"]::after {
+        display: none;
+    }
+}
+
+/* Animación de fade para contenido que cambia */
+.content-fade-out {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease-out;
+}
+
+.content-fade-in {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.3s ease-in;
+}
+
+/* Efectos especiales para el cambio de idioma */
+.language-switch-effect {
+    position: relative;
+}
+
+.language-switch-effect::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, 
+        rgba(0, 255, 255, 0.1), 
+        rgba(139, 92, 246, 0.1),
+        rgba(0, 255, 255, 0.1)
+    );
+    opacity: 0;
+    animation: languageGlow 0.6s ease-in-out;
+    pointer-events: none;
+    z-index: 1;
+}
+
+@keyframes languageGlow {
+    0%, 100% {
+        opacity: 0;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.02);
+    }
+}
+
+/* Tooltip personalizado para el botón */
+.language-toggle {
+    position: relative;
+}
+
+.language-toggle:hover::after {
+    content: attr(title);
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(26, 26, 46, 0.95);
+    color: white;
+    padding: 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    z-index: 1000;
+    animation: tooltipFadeIn 0.2s ease-out;
+}
+
+@keyframes tooltipFadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+/* Ajuste en la navegación para acomodar el botón */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+/* Animación suave para textos que cambian */
+.text-transition {
+    transition: all 0.3s ease-in-out;
+}
+
+.text-transition.changing {
+    opacity: 0.7;
+    transform: scale(0.98);
+}
+
+/* Efectos especiales durante el cambio de idioma */
+body.language-switching {
+    overflow-x: hidden;
+}
+
+body.language-switching * {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Mejorar la accesibilidad del botón */
+.language-toggle:focus {
+    outline: 2px solid #00ffff;
+    outline-offset: 2px;
+}
+
+.language-toggle:focus:not(:focus-visible) {
+    outline: none;
+}
+
+/* Estados de carga durante el cambio */
+.language-toggle.loading {
+    animation: buttonPulse 1s infinite ease-in-out;
+    pointer-events: none;
+}
+
+@keyframes buttonPulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}

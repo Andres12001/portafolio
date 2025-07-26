@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carlos Andrés Vargas - Desarrollador de IA</title>
+    
+    <!-- CSS Modular -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/skills.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/language.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">CAV</div>
+            <div>
+                <ul class="nav-menu">
+                    <li><a href="#inicio" data-translate="nav-home">Inicio</a></li>
+                    <li><a href="#proyectos" data-translate="nav-projects">Proyectos</a></li>
+                    <li><a href="#habilidades" data-translate="nav-skills">Habilidades</a></li>
+                    <li><a href="#contacto" data-translate="nav-contact">Contacto</a></li>
+                </ul>
+                <button class="language-toggle" id="languageToggle">
+                    <span class="language-flag">🇪🇸</span>
+                    <span class="language-text">ES</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección Principal (Hero) -->
+    <section id="inicio" class="hero">
+        <div class="hero-background">
+            <div class="circuit-pattern"></div>
+            <div class="neural-network">
+                <svg class="neural-svg" viewBox="0 0 800 600">
+                    <!-- Neuronas y conexiones -->
+                    <g class="neural-connections">
+                        <!-- Conexiones animadas -->
+                        <line x1="100" y1="150" x2="200" y2="200" class="connection" />
+                        <line x1="100" y1="250" x2="200" y2="200" class="connection" />
+                        <line x1="100" y1="350" x2="200" y2="300" class="connection" />
+                        <line x1="200" y1="200" x2="300" y2="180" class="connection" />
+                        <line x1="200" y1="300" x2="300" y2="220" class="connection" />
+                        <line x1="300" y1="180" x2="400" y2="200" class="connection" />
+                        <line x1="300" y1="220" x2="400" y2="200" class="connection" />
+                        
+                        <!-- Más conexiones que forman las manos -->
+                        <path d="M400 200 Q500 150 600 180 Q650 200 680 240" class="hand-outline left-hand" />
+                        <path d="M400 200 Q500 250 600 220 Q650 200 680 160" class="hand-outline right-hand" />
+                        <path d="M680 240 Q690 260 685 280 Q680 300 670 310" class="finger finger-1" />
+                        <path d="M680 160 Q690 140 685 120 Q680 100 670 90" class="finger finger-2" />
+                    </g>
+                    
+                    <!-- Nodos neuronales -->
+                    <circle cx="100" cy="150" r="8" class="neuron input" />
+                    <circle cx="100" cy="250" r="8" class="neuron input" />
+                    <circle cx="100" cy="350" r="8" class="neuron input" />
+                    <circle cx="200" cy="200" r="10" class="neuron hidden" />
+                    <circle cx="200" cy="300" r="10" class="neuron hidden" />
+                    <circle cx="300" cy="180" r="10" class="neuron hidden" />
+                    <circle cx="300" cy="220" r="10" class="neuron hidden" />
+                    <circle cx="400" cy="200" r="12" class="neuron output" />
+                    
+                    <!-- Nodos que representan las manos -->
+                    <circle cx="600" cy="180" r="6" class="hand-node" />
+                    <circle cx="600" cy="220" r="6" class="hand-node" />
+                    <circle cx="680" cy="240" r="8" class="hand-joint" />
+                    <circle cx="680" cy="160" r="8" class="hand-joint" />
+                </svg>
+            </div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="hero-name" data-translate="hero-name">Carlos Andrés Vargas</span>
+                </h1>
+                <p class="hero-subtitle" data-translate="hero-title">Desarrollador de Inteligencia Artificial</p>
+                <p class="hero-description" data-translate="hero-description">Especializado en Computer Vision y Procesamiento de Lenguaje Natural. Transformando ideas innovadoras en soluciones de IA que impactan positivamente en la sociedad.</p>
+                <div class="hero-cta">
+                    <button class="cta-button primary" data-translate="hero-cta1">Ver Proyectos</button>
+                    <button class="cta-button secondary" data-translate="hero-cta2">Descargar CV</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Sección de Proyectos Destacados -->
+    <section id="proyectos" class="projects-section">
+        <div class="container">
+            <h2 class="section-title" data-translate="projects-title">Proyectos Destacados</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder sign-language">
+                            <div class="hand-icon">🤟</div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title" data-translate="project1-title">Reconocimiento de Lenguaje de Señas</h3>
+                        <p class="project-description" data-translate="project1-desc">Sistema de IA que traduce lenguaje de señas a texto en tiempo real usando computer vision y redes neuronales convolucionales.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">OpenCV</span>
+                            <span class="tech-tag">MediaPipe</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder neural-network">
+                            <div class="brain-icon">🧠</div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title" data-translate="project2-title">Chatbot Inteligente</h3>
+                        <p class="project-description" data-translate="project2-desc">Asistente virtual basado en NLP capaz de entender contexto y mantener conversaciones naturales con los usuarios.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Transformers</span>
+                            <span class="tech-tag">BERT</span>
+                            <span class="tech-tag">FastAPI</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder computer-vision">
+                            <div class="eye-icon">👁️</div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title" data-translate="project3-title">Análisis Predictivo de Datos</h3>
+                        <p class="project-description" data-translate="project3-desc">Modelo de machine learning para predicción de tendencias de mercado usando análisis de series temporales.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Scikit-learn</span>
+                            <span class="tech-tag">Pandas</span>
+                            <span class="tech-tag">Prophet</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Habilidades Técnicas -->
+    <section id="habilidades" class="skills-section">
+        <div class="container">
+            <h2 class="section-title" data-translate="skills-title">Habilidades Técnicas</h2>
+            
+            <div class="skills-categories">
+                <div class="skill-category">
+                    <h3>Inteligencia Artificial</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon tensorflow">🧠</div>
+                            <h4>TensorFlow/PyTorch</h4>
+                            <p>Machine Learning y Deep Learning</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon opencv">👁️</div>
+                            <h4>Computer Vision</h4>
+                            <p>Computer Vision y Procesamiento de Imágenes</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon nlp">💬</div>
+                            <h4>NLP</h4>
+                            <p>Procesamiento de Lenguaje Natural</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Programación</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon python">🐍</div>
+                            <h4>Python</h4>
+                            <p>Desarrollo Backend y Scripting</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon javascript">⚡</div>
+                            <h4>JavaScript</h4>
+                            <p>Desarrollo Frontend y Aplicaciones Web</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon react">⚛️</div>
+                            <h4>React</h4>
+                            <p>Interfaces de Usuario Modernas</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Herramientas</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon git">🔧</div>
+                            <h4>Git</h4>
+                            <p>Control de Versiones y Colaboración</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon docker">🐳</div>
+                            <h4>Docker</h4>
+                            <p>Containerización y Despliegue</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon aws">☁️</div>
+                            <h4>AWS</h4>
+                            <p>Cloud Computing y MLOps</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Habilidades Blandas</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon teamwork">🤝</div>
+                            <h4>Trabajo en Equipo</h4>
+                            <p>Trabajo en Equipo</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon problem-solving">🧩</div>
+                            <h4>Resolución de Problemas</h4>
+                            <p>Resolución de Problemas</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon communication">💭</div>
+                            <h4>Comunicación</h4>
+                            <p>Comunicación Efectiva</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contacto" class="contact-section">
+        <div class="container">
+            <h2 class="section-title" data-translate="contact-title">Contacto</h2>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="contact-icon email">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Email</h3>
+                                <p>carlos.vargas2001@pm.me</p>
+                                <p>Contáctame directamente</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon linkedin">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <h3>LinkedIn</h3>
+                                <p>https://www.linkedin.com/in/carlos-vargas-b15b102a6/</p>
+                                <p>Conectemos profesionalmente</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon github">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <h3>GitHub</h3>
+                                <p>https://github.com/Andres12001</p>
+                                <p>Revisa mi código</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <h3>Envíame un Mensaje</h3>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nombre completo</label>
+                            <input type="text" id="name" name="name" placeholder="Nombre completo" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Correo electrónico</label>
+                            <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Asunto</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Asunto</option>
+                                <option value="collaboration">Colaboración</option>
+                                <option value="job">Oportunidad Laboral</option>
+                                <option value="consulting">Consultoría</option>
+                                <option value="other">Otro</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Mensaje" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-button">
+                            <span class="button-text">Enviar Mensaje</span>
+                            <span class="button-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                                </svg>
+                            </span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Decoración de fondo -->
+        <div class="contact-decoration">
+            <div class="floating-elements">
+                <div class="floating-element" style="--delay: 0s; --duration: 8s;"></div>
+                <div class="floating-element" style="--delay: 2s; --duration: 12s;"></div>
+                <div class="floating-element" style="--delay: 4s; --duration: 10s;"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p class="footer-text">&copy; 2025 Carlos Andrés Vargas. Todos los derechos reservados.</p>
+                    <p class="footer-made-with">Hecho con ❤️ y ☕</p>
+                </div>
+                <div class="footer-right">
+                    <div class="social-links">
+                        <a href="mailto:carlos.vargas2001@pm.me" class="social-link email" aria-label="Email">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/carlos-vargas-b15b102a6/" class="social-link linkedin" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="https://github.com/Andres12001" class="social-link github" aria-label="GitHub">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Modular -->
+    <script src="js/test-button.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/simple-translations.js"></script>
+    <script src="js/notifications.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/scroll-effects.js"></script>
+    <script src="js/neural-network.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/contact-form.js"></script>
+    <script src="js/easter-egg.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

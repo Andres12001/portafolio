@@ -1,0 +1,32 @@
+{
+  "name": "portafolio-carlos-vargas",
+  "version": "1.0.0",
+  "description": "Portafolio web moderno para desarrollador de IA especializado en Visión por Computadora",
+  "main": "index.html",
+  "scripts": {
+    "dev": "live-server --port=3000 --open=/index.html",
+    "build": "echo 'Proyecto listo para producción'",
+    "lint": "echo 'Linting CSS y JS files'",
+    "optimize": "echo 'Optimizando assets para producción'"
+  },
+  "keywords": [
+    "portfolio",
+    "AI",
+    "computer-vision",
+    "machine-learning",
+    "web-development",
+    "javascript",
+    "css3",
+    "html5"
+  ],
+  "author": "Carlos Andrés Vargas",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
