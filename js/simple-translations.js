@@ -37,7 +37,12 @@ const SimpleTranslator = {
             
             // Contacto
             'contact-title': 'Contacto',
-            'contact-subtitle': 'Trabajemos juntos en tu próximo proyecto'
+            'contact-subtitle': 'Trabajemos juntos en tu próximo proyecto',
+            
+            // CV Download
+            'cv-download-start': 'Iniciando descarga del CV...',
+            'cv-download-success': '¡CV descargado exitosamente!',
+            'cv-download-error': 'Error al descargar el CV'
         },
         
         en: {
@@ -72,7 +77,12 @@ const SimpleTranslator = {
             
             // Contact
             'contact-title': 'Contact',
-            'contact-subtitle': 'Let\'s work together on your next project'
+            'contact-subtitle': 'Let\'s work together on your next project',
+            
+            // CV Download
+            'cv-download-start': 'Starting CV download...',
+            'cv-download-success': 'CV downloaded successfully!',
+            'cv-download-error': 'Error downloading CV'
         }
     },
     
