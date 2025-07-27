@@ -24,12 +24,12 @@ const SimpleTranslator = {
             // Proyectos
             'projects-title': 'Proyectos Destacados',
             'projects-subtitle': 'Explora mis trabajos más recientes en Inteligencia Artificial',
-            'project1-title': 'Reconocimiento de Lenguaje de Señas',
+            'project1-title': 'COLMI - Reconocimiento de Lenguaje de Señas',
             'project1-desc': 'Sistema de IA que traduce lenguaje de señas a texto en tiempo real usando computer vision y redes neuronales convolucionales.',
-            'project2-title': 'Chatbot Inteligente',
-            'project2-desc': 'Asistente virtual basado en NLP capaz de entender contexto y mantener conversaciones naturales con los usuarios.',
-            'project3-title': 'Análisis Predictivo de Datos',
-            'project3-desc': 'Modelo de machine learning para predicción de tendencias de mercado usando análisis de series temporales.',
+            'project2-title': 'Saludia - Chatbot Médico Inteligente',
+            'project2-desc': 'App Android médica que interpreta exámenes de sangre mediante IA y comunica los resultados de forma simple y comprensible a los usuarios.',
+            'project3-title': 'PaesFacil - Preparación PAES',
+            'project3-desc': 'App móvil gratuita que ayuda a estudiantes chilenos a prepararse para la PAES con ejercicios, simulacros y seguimiento de progreso.',
             
             // Habilidades
             'skills-title': 'Habilidades Técnicas',
@@ -64,12 +64,12 @@ const SimpleTranslator = {
             // Projects
             'projects-title': 'Featured Projects',
             'projects-subtitle': 'Explore my latest work in Artificial Intelligence',
-            'project1-title': 'Sign Language Recognition',
+            'project1-title': 'COLMI - Sign Language Recognition',
             'project1-desc': 'AI system that translates sign language to text in real-time using computer vision and convolutional neural networks.',
-            'project2-title': 'Intelligent Chatbot',
-            'project2-desc': 'NLP-based virtual assistant capable of understanding context and maintaining natural conversations with users.',
-            'project3-title': 'Predictive Data Analysis',
-            'project3-desc': 'Machine learning model for market trend prediction using time series analysis.',
+            'project2-title': 'Saludia - Intelligent Medical Chatbot',
+            'project2-desc': 'Medical Android app that interprets blood test results using AI and communicates findings in a simple, understandable way to users.',
+            'project3-title': 'PaesFacil - PAES Preparation',
+            'project3-desc': 'Free mobile app that helps Chilean students prepare for PAES with exercises, mock tests, and progress tracking.',
             
             // Skills
             'skills-title': 'Technical Skills',

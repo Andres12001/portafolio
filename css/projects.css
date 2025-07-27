@@ -34,6 +34,22 @@
     height: 200px;
     position: relative;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--color-purple), var(--color-cyan));
+}
+
+.project-logo {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.project-logo:hover {
+    transform: scale(1.05);
 }
 
 .project-placeholder {
@@ -56,6 +72,10 @@
 
 .project-placeholder.computer-vision {
     background: linear-gradient(135deg, var(--color-cyan), var(--color-blue));
+}
+
+.project-placeholder.paes-app {
+    background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
 }
 
 .project-info {

@@ -13,12 +13,35 @@
 Esta carpeta fue creada durante el desarrollo, pero **el sistema usa la carpeta `/portafolio/` para el CV real**.
 
 ## 📁 Estado actual de la carpeta:
-- ✅ **Limpia**: Los archivos de ejemplo han sido eliminados
-- ✅ **Solo documentación**: Únicamente contiene este README explicativo
+- ✅ **Icons**: Contiene logos de proyectos (logo.png para COLMI)
+- ✅ **Solo documentación**: Este README explicativo
+- 🗑️ **Archivos CV eliminados**: Los ejemplos de CV fueron removidos
 
 ## ✅ Archivo REAL que se descarga:
 - **Ubicación**: `/portafolio/cv_vargas.pdf`
 - **Configurado en**: `js/cv-downloader.js`
+
+## 🎨 Gestión de Iconos y Logos
+
+### 📁 Carpeta icons/
+- **`logo.png`**: Logo de COLMI (proyecto de reconocimiento de lenguaje de señas)
+- **`logo_saludia.png`**: Logo de Saludia (app médica Android para interpretación de exámenes)
+- **`logo_paes.png`**: ⏳ _Pendiente_ - Logo de PaesFacil (app educativa para preparación PAES)
+- **Uso**: Se muestran en las tarjetas de proyectos en `index.html`
+- **Estilos**: Configurados en `css/projects.css` con efectos hover
+
+### Para agregar más logos:
+1. **Formato recomendado**: PNG con fondo transparente
+2. **Tamaño**: Mínimo 200x200px, máximo 800x800px
+3. **Nombrado**: `logo-proyecto.png` (descriptivo)
+4. **Actualizar HTML**: Agregar `<img src="assets/icons/nuevo-logo.png">`
+5. **Verificar CSS**: Los estilos `.project-logo` se aplican automáticamente
+
+### 📋 Próximo logo pendiente:
+**PaesFacil**: Cuando tengas el logo listo, nómbralo como `logo_paes.png` y actualiza el HTML del proyecto 3:
+```html
+<img src="assets/icons/logo_paes.png" alt="PaesFacil - Preparación PAES" class="project-logo">
+```
 
 ## 🔄 Cómo Actualizar el CV
 
