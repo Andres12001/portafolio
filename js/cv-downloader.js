@@ -32,9 +32,9 @@ const CVDownloader = {
         // Mostrar notificación de inicio de descarga
         this.showDownloadNotification(startMessage, 'info');
 
-        // Crear elemento de descarga
+        // Crear elemento de descarga - usando la carpeta portafolio existente
         const link = document.createElement('a');
-        link.href = 'assets/CV-Carlos-Vargas.pdf';
+        link.href = 'portafolio/cv_vargas.pdf';
         link.download = 'CV-Carlos-Vargas.pdf';
         link.style.display = 'none';
         

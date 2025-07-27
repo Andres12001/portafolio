@@ -1,30 +1,33 @@
 # 📄 Gestión del CV
 
-Esta carpeta contiene los archivos del Curriculum Vitae que se descargan desde el portafolio.
+⚠️ **NOTA IMPORTANTE**: Esta carpeta ya no se usa para el CV. El CV actual se encuentra en la carpeta `/portafolio/cv_vargas.pdf`
 
-## 📁 Archivos Disponibles
+## � Para actualizar tu CV:
 
-### `CV-Carlos-Vargas.pdf`
-- **Formato**: PDF optimizado para descarga
-- **Uso**: Archivo principal que se descarga al hacer clic en "Descargar CV"
-- **Recomendación**: Mantener actualizado con la información más reciente
+1. Reemplaza el archivo `portafolio/cv_vargas.pdf` con tu CV actualizado
+2. Mantén el nombre del archivo como `cv_vargas.pdf` 
+3. O actualiza la referencia en `js/cv-downloader.js` si cambias el nombre
 
-### `CV-Carlos-Vargas.md`
-- **Formato**: Markdown para fácil edición
-- **Uso**: Versión editable del CV para actualizaciones
-- **Beneficio**: Fácil de mantener y convertir a otros formatos
+---
+
+Esta carpeta fue creada durante el desarrollo, pero **el sistema usa la carpeta `/portafolio/` para el CV real**.
+
+## 📁 Estado actual de la carpeta:
+- ✅ **Limpia**: Los archivos de ejemplo han sido eliminados
+- ✅ **Solo documentación**: Únicamente contiene este README explicativo
+
+## ✅ Archivo REAL que se descarga:
+- **Ubicación**: `/portafolio/cv_vargas.pdf`
+- **Configurado en**: `js/cv-downloader.js`
 
 ## 🔄 Cómo Actualizar el CV
 
-### Opción 1: Reemplazar el PDF
-1. Crea tu CV actualizado en PDF
-2. Nómbralo como `CV-Carlos-Vargas.pdf`
-3. Reemplaza el archivo existente en esta carpeta
+**RECORDATORIO**: El CV real está en `/portafolio/cv_vargas.pdf`
 
-### Opción 2: Editar el Markdown
-1. Edita el archivo `CV-Carlos-Vargas.md`
-2. Usa un conversor online para generar PDF desde Markdown
-3. Reemplaza el archivo PDF
+### Para actualizar tu CV:
+1. Reemplaza el archivo `portafolio/cv_vargas.pdf` con tu CV actualizado
+2. Mantén el nombre `cv_vargas.pdf` o actualiza `js/cv-downloader.js`
+3. El sistema automáticamente usará el nuevo archivo
 
 ## 📋 Contenido Recomendado
 
